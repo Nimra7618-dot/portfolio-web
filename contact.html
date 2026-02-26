@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me | Nimra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="logo">Nimra</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Contact Section -->
+<section class="section contact-section">
+  <h2>Contact Me</h2>
+  <p class="contact-intro">I am available for freelance work, internships, and collaboration. Reach out and let's create something amazing together!</p>
+
+  <div class="contact-grid">
+
+    <!-- Contact Info -->
+    <div class="contact-info-card">
+      <i class="fas fa-envelope"></i>
+      <h3>Email</h3>
+      <p><a href="mailto:nimra@email.com">nimra@email.com</a></p>
+    </div>
+
+    <div class="contact-info-card">
+      <i class="fab fa-linkedin"></i>
+      <h3>LinkedIn</h3>
+      <p><a href="https://linkedin.com/in/nimra" target="_blank">linkedin.com/in/nimra</a></p>
+    </div>
+
+    <div class="contact-info-card">
+      <i class="fab fa-github"></i>
+      <h3>GitHub</h3>
+      <p><a href="https://github.com/nimra" target="_blank">github.com/nimra</a></p>
+    </div>
+
+  </div>
+
+  <!-- Contact Form -->
+  <div class="contact-form-card">
+    <h3>Send Me a Message</h3>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2026 Nimra | All Rights Reserved</p>
+  <div class="socials">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<!-- Form Script -->
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Get form values
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  
+  // Show success message (you can integrate with email service)
+  alert('Thank you ' + name + '! Your message has been sent.\n\nI will reply to: ' + email);
+  
+  // Reset form
+  this.reset();
+});
+</script>
+
+</body>
+</html>
